@@ -1,24 +1,40 @@
-import logo from './logo.svg';
 import './App.css';
+import ImageSlider from './components/ImageSlider'
+import Navbar from './components/navbar'
+import History from './components/history'
+import Lechones from './components/lechones'
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
+  const slides = [
+    {url : "http://localhost:3000/Platos/IMG-20220901-WA0009.jpg"},
+    {url : "http://localhost:3000/Platos/IMG-20220901-WA0010.jpg"},
+    {url : "http://localhost:3000/Platos/IMG-20220901-WA0011.jpg"},
+  ]
+
+  const containerStyles = {
+    width : "700px",
+    height : "500px",
+    margin : "0 auto",
+  }
+  
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Navbar/>
+      <hr/>
+      
+      Slider
+
+      <hr/>
+      
+      {/* <History/>
+
+      <hr/>
+
+      <Lechones/> */}
+
     </div>
+
   );
 }
 
